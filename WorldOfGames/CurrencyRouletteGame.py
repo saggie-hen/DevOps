@@ -2,7 +2,7 @@ from abc import ABC
 import requests
 import random
 
-
+# this way has no added value in concept of OOP. you should inherit each game from a generic GAME class which he will be an abstract
 class CurrencyRouletteGame(ABC):
 
     def __init__(self, difficulty):
@@ -22,7 +22,7 @@ class CurrencyRouletteGame(ABC):
 
     @staticmethod
     def convert_usd_to_ils():
-        url = 'https://free.currconv.com/api/v7/convert?q=USD_ILS&compact=ultra&apiKey=745a7a1c61a087e2ed35'
+        url = 'https://free.currconv.com/api/v7/convert?q=USD_ILS&compact=ultra&apiKey=745a7a1c61a087e2ed35' # if you up for another challenge, you can think gow to pass the secret key securly and not in raw code
         res = r = requests.get(url)
         if res.status_code == 200:
             return res.json()['USD_ILS']

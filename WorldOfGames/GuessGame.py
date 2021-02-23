@@ -13,7 +13,7 @@ class GuessGame(ABC):
         print(self.secretNumber)
 
     def get_guess_from_user(self):
-        guess = int(input(f"Guess a number between 1 to {self.difficulty}"))
+        guess = int(input(f"Guess a number between 1 to {self.difficulty}")) # this is not safe, do input validation before casting to int
         return guess
 
     def compare_results(self):
