@@ -2,7 +2,7 @@ from abc import ABC
 import requests
 import random
 
-
+# this way has no added value in concept of OOP. you should inherit each game from a generic GAME class which he will be an abstract
 class CurrencyRouletteGame(ABC):
 
     def __init__(self, difficulty):
